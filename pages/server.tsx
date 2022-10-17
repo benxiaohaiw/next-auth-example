@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import type { GetServerSidePropsContext } from "next"
 import type { Session } from "next-auth"
 
+// /server
 export default function ServerSidePage({ session }: { session: Session }) {
   // As this page uses Server Side Rendering, the `session` will be already
   // populated on render without needing to go through a loading stage.
@@ -34,6 +35,9 @@ export default function ServerSidePage({ session }: { session: Session }) {
   )
 }
 
+// 写了这个钩子函数，那么这个session参数便会随页面传送给客户端，客户端混合后的逻辑是重用这个session
+
+// 导出 `session` 属性以使用带有服务器端渲染的会话
 // Export the `session` prop to use sessions with Server Side Rendering
 export async function getServerSideProps(context: GetServerSidePropsContext) {
   return {

@@ -62,4 +62,5 @@ export const authOptions: NextAuthOptions = {
   },
 }
 
+// 执行该函数返回一个函数是对请求该url的处理函数
 export default NextAuth(authOptions)

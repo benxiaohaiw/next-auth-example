@@ -1,5 +1,6 @@
 import Layout from "../components/layout"
 
+// /client
 export default function ClientPage() {
   return (
     <Layout>
@@ -25,3 +26,5 @@ export default function ClientPage() {
     </Layout>
   )
 }
+
+// 需要在客户端单独发送请求的
